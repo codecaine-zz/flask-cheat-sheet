@@ -81,7 +81,7 @@ from flask import Blueprint
 
 admin = Blueprint('admin', __name__)
 
-@main.route('/')
+@admin.route('/')
 def index():
 	return "Hello, World! This is the admin page."
 ```
@@ -127,7 +127,7 @@ def home():
 ```
 - Using Jinja2 inside `templates/home.html`:
 ```html
-{% for posts in posts %}
+{% for post in posts %}
 	<div>
 		{{ post.body }} <br>
 		{{ post.timestamp }}
